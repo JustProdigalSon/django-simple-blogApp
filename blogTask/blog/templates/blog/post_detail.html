@@ -1,0 +1,37 @@
+{%extends 'blog/base.html'%}
+{%block content%}
+<h1>{{post.title}}</h1>
+<small>{{post.date_added}}</small>
+<p>{{post.body}}</p>
+
+<hr>
+
+<div class="comments">
+    <h2>Comments</h2>
+    {%for comment in post.comments.all%}
+        <div class="comment">
+            <div class="comment-info">
+                <h3>{{comment.name}}</h3>
+                <small>{{comment.date_added}}</small>
+            </div>
+            <div class="comment-body">
+                <p>{{comment.body}}</p>
+            </div>
+        </div>
+    {%empty%}
+        <p>No comments yet</p>
+    {%endfor%}
+
+<hr>
+
+<h4>ADD COMENT</h4>
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <div class="comment-field">
+        <div>
+            <button class="button-comment">Add Comment</button>
+        </div>    
+    </div>
+</form>    
+{%endblock%}

@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #007bff;
+  color: #ebe7df;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbar-div ul li {
+  display: inline-block;
+}
+.navbar .navbar-div ul li .navbar-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.navbar .navbar-div ul li .navbar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section {
+  padding: 20px;
+  background-color: #fff5e2;
+}
+.section .container {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #007bff;
+}/*# sourceMappingURL=base.css.map */
